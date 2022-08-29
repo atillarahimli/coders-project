@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block body %}
+    <h1>{{objects.title}}</h1>
+    <p>{{objects.content}}</p>
+    <p>{{objects.created_date}}</p>
+    <p>{{objects.updated_date}}</p>
+    <img src="{{ objects.image.url }}" alt="" width=200 height=250>
+    
+{% endblock body %}

@@ -1,0 +1,31 @@
+
+{% extends 'base.html' %}
+
+
+
+
+
+{% block body %}
+
+<div>
+    {% for obj in categories %}
+    
+    <a href="{% url 'categories' obj.slug %}"><h3>{{obj.title}}</h3></a>
+    {% endfor %}
+    
+
+</div>
+
+
+    <div class='main_body'>
+        {% for obj in news %}
+            <h1><a href="{% url 'details' obj.slug %}">{{obj.title}}</a></h1>
+            <p>{{obj.updated_date}}</p>
+            
+
+            <hr>
+            <hr>
+
+        {% endfor %}
+    </div>
+{% endblock body %}
